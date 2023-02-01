@@ -61,7 +61,10 @@ const Register = () => {
       password: password,
     });
     const response = await request(url, options);
-    if (response.ok) userLogin(user, password);
+     if (response) {
+      userLogin(user, password);
+      navigate('/login');
+    }
   }
 
   return (
