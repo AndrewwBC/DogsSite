@@ -9,6 +9,7 @@ import useFecth from '../../useFecth';
 import { USER_POST } from '../../api';
 import { UserContext } from '../../UserContext';
 import Error from '../../Helper/Error';
+import { useNavigate } from 'react-router-dom';
 
 const Container = styled.div`
   display: grid;
