@@ -50,7 +50,8 @@ const Register = () => {
   const [user, setUser] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
-
+  const navigate = useNavigate();
+  
   const { load, error, request } = useFecth();
   const { userLogin } = React.useContext(UserContext);
   async function handleSubmit(event) {
