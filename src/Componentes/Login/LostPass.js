@@ -33,7 +33,7 @@ const Form = styled.form`
   @media (max-width: 768px) {
     padding: 0rem 2rem 0rem 2rem;
     box-sizing: border-box;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -41,7 +41,7 @@ const Dogs = styled.img`
   object-fit: cover;
   min-height: 100vh;
   margin-top: -100px;
-  @media (max-width: 520px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;

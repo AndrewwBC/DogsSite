@@ -17,7 +17,7 @@ const Container = styled.div`
   grid-template-columns: 2fr 1fr;
   min-height: 100vh;
   gap: 3rem;
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
@@ -31,10 +31,10 @@ const Form = styled.form`
   padding-right: 2rem;
   margin-bottom: 4rem;
   flex-direction: column;
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     padding: 0rem 2rem 0rem 2rem;
     box-sizing: border-box;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -42,7 +42,7 @@ const Dogs = styled.img`
   object-fit: cover;
   min-height: 100vh;
   margin-top: -100px;
-  @media (max-width: 520px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;
@@ -52,7 +52,7 @@ const Register = () => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const navigate = useNavigate();
-  
+
   const { load, error, request } = useFecth();
   const { userLogin } = React.useContext(UserContext);
   async function handleSubmit(event) {
@@ -63,7 +63,7 @@ const Register = () => {
       password: password,
     });
     const response = await request(url, options);
-     if (response) {
+    if (response) {
       userLogin(user, password);
       navigate('/login');
     }
